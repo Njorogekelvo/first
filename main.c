@@ -1,41 +1,37 @@
-/*
-project:simple calculator that takes two numbers and outputs the sum,difference,product and quotient of the numbers
-Author:@kelvin GICHUHI
-Compiler:c89
-License:MIT
-date  :July 2022
-
-*/
 #include <stdio.h>
 #include <stdlib.h>
-
+// relational operators:> < <= >= == !=
+//logical operator: &&(and ||(pipes) !(not) - used to combine two programs
+// control structures
+// 1. selection/decision making/conditional;( if - to pass a condition),(else - as an alternative if misses condition)
+int main();
 int main()
 {
-  //  variable declaraction
-      float num1,num2,sum,difference,product,quotient;
-
-    printf("\tCalculator!\n");
-   // input
-    printf (" Enter two numbers:\n");
-    scanf ("%f%f",&num1,&num2);
-    // computation
-   //arithmetic operation: + - * / ++ -- %
-    sum = num1 +num2;
-    difference = num1 - num2;
-    product = num1 * num2;
-    qtient = num1 / num2;
-    // output
-    // 20 + 30 =50
-    printf(" %8.2f + %8.2f = %8.2f\n",num1,num2,sum);
-
-    printf(" %8.2f - %8.2f = %8.2f\n",num1,num2,difference);
-
-    printf(" %8.2f * %8.2f = %8.2f\n",num1,num2,product);
-
-    printf(" %8.2f / %8.2f = %8.2f\n",num1,num2,quotient);
+    printf("tWelcome to zetech c snack shop !\n");
+    menu();
     return 0;
 }
+  int menu()
+{
 
+  int item;
+  printf("\tToday's menu\n");
+  printf("1. Hamburger - ksh. 50\n");
+  printf("2. Samosa - ksh. 50\n");
+  printf("3. Coffee - ksh. 40\n");
+  printf("Enter Item No: ");
+  scanf(" %d",&item);
+   if(item > 0 && item <= 3)
+     {
+    printf("item added to cart,Thank you for choosing us\n");
+  }
+
+  else{
+      printf("invalid item\n");
+      menu();
+  }
+    return item;
+}
 
 
 
